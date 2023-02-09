@@ -1,0 +1,13 @@
+div.LifePage{
+  background-image: url(../images/backgroundImages/backgroundimage-laptopCity.png);
+  }
+  .LifePage div.containerConteudo{
+    display: flex;
+    flex-direction: column;
+    max-width: 240px;
+  }
+  .LifePage h1{
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 200;
+  }

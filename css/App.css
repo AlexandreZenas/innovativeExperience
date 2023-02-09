@@ -1,0 +1,81 @@
+@import url(./navMenu.css);
+@import url(./homePage.css);
+@import url(./descritionPage.css);
+@import url(./ilustrationPage.css);
+@import url(./lifePage.css);
+@import url(./exemplePage.css);
+
+html,body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    text-align: center;
+    background-color: #282c34;
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+
+/* Header */
+header.navBar{
+    display: flex;
+    justify-content: space-between;
+    padding: 2vh 2vw;
+    position: fixed;
+    width: 96vw;
+    margin: 0 auto;
+    z-index: 10;
+  }
+  .Burguer{
+    width: 20px;
+    color: white !important;
+    border: white;
+  }
+
+  /* Home Main */
+  section.HomeMain{
+    position: relative;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+/* All Pages */
+div.Pages{
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: -100vh;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    }
+  /* animation ScrollPage */
+  /* div.HiddenPage{
+    top: -100vh;
+    transition: 1s;  
+  } */
+  div.visibilityPage{
+    top:0vh;
+    transition: 0s;
+  }
+  div.animationPageUp{
+    /* z-index: 5; */
+    top: -100vh;   
+    transition: 1s; 
+    z-index: 6;
+  }
+  /* @keyframes pageUpzIndex {
+      from{
+        z-index: 6;
+      }
+      to{
+        z-index: 5;
+      }
+  } */

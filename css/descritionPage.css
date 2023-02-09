@@ -1,0 +1,13 @@
+div.DescritionPage{
+  background-image: url(../images/backgroundImages/backgroundImage-cityFuturistic.png);
+  }
+  .DescritionPage div.containerConteudo{
+    display: flex;
+    flex-direction: column;
+    max-width: 240px;
+  }
+  .DescritionPage h1{
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 200;
+  }

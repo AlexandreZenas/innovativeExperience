@@ -1,0 +1,17 @@
+  /*navMenu*/
+  nav.navMenu{
+    position: fixed;
+    top: calc(50% - 54px);
+    right: 20px;
+    z-index: 10;
+  }
+  .navMenu ol.NumbersOl{
+    padding: 0;
+    margin: 0;
+    list-style-type:none;
+  }
+  .NumbersOl li{
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 200;
+  }
