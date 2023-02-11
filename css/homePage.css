@@ -2,9 +2,9 @@
 div.HomePage{
   background-image: url(../images/backgroundImages/DeLuxeBackground-01.jpg );
     }
-    .textAnimation {
-      animation: textTitle  3.2s linear 1s both;
-      opacity: 0;
-      font-size: 0rem;
-    }
+.textAnimation {
+  animation: text-focus-in  2.2s ease-in-out 1.5s both;
+  opacity: 0;
+  font-size: 0rem;
+}
 

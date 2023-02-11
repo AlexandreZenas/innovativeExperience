@@ -17,9 +17,6 @@
       opacity: 0;
       font-size: 0rem;
     }
-    50%{
-        font-size: 3.5rem;
-    }
     100% {
       transform: translateZ(0);
       opacity: 1;

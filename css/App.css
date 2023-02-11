@@ -78,6 +78,7 @@ div.Pages{
       letter-spacing: 0.3em;
       transform: scaleY(1.15);
       font-style: oblique;
+      overflow: hidden;
     }
     .containerConteudo a{
       text-decoration: none;
