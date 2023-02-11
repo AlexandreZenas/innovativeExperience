@@ -2,8 +2,9 @@
   const allContainers = document.querySelectorAll('.Pages');
   const nodeArray = Array.from(allContainers); 
 //array Spans
-  const allSpan = document.querySelectorAll('.containerConteudo > span');
+  const allSpan = document.querySelectorAll('.containerConteudo > a > span');
   const spanArray = Array.from(allSpan)
+  console.log(allSpan)
 //Array Li
   const navMenuLi = document.querySelectorAll('.NumbersOl > li');
   const liArray = Array.from(navMenuLi)

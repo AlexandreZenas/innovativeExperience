@@ -79,11 +79,19 @@ div.Pages{
       transform: scaleY(1.15);
       font-style: oblique;
     }
-    .containerConteudo span.animationSpan{
+    .containerConteudo a{
+      text-decoration: none;
+      color: white;
+    }
+    .containerConteudo a:hover{
+      color: rgb(163, 163, 163);
+    }
+    span.animationSpan{
       animation: animationSpan 1s ease-in-out 1s both;
       display: flex;
       align-items: center;
       justify-content: center;
+      cursor: pointer;
     }
     /* .containerConteudo span.animationSpan::before{
     } */
