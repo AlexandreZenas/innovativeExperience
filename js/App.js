@@ -55,7 +55,26 @@
           nodeArray[i+1].classList.remove('animationPageUp');        
         }
     });
+    //evento de Click no nav menu
     liArray[i].addEventListener('click', (event) => {
-      console.log(liArray[i])
+
+      //nodeArray forEach: para adicionar o animationPageUp em todas as paginas, em seguida removendo da pagina selecionada e adicionando o visibilityPage na pagina selecionada
+      nodeArray.forEach((item, index) => {
+        item.classList.add("animationPageUp");
+        item.classList.remove("visibilityPage");
+      });
+      nodeArray[i].classList.remove('animationPageUp');
+      nodeArray[i].classList.add('visibilityPage');
+      // removendo o activeSlide de toda as li e adicionando na que foi clicada.
+      liArray.forEach((item, index) => {
+        item.classList.remove('activeSlide')
+      });
+      liArray[i].classList.add('activeSlide');
+
+      //removendo o animationSpan de toda as Pages e adicionando na que foi clicada.
+      spanArray[i].classList.remove('animationSpan');
+      setTimeout(() => {
+        spanArray[i].classList.add('animationSpan');  
+      },100); 
     });
   }

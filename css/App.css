@@ -64,12 +64,20 @@ div.Pages{
     background-size: cover;
     background-repeat: no-repeat;
     }
-    div.containerConteudo{
+    .Pages div.containerConteudo{
        width: 100%;
        display: flex;
        align-items: center;
        flex-direction: column;
        font-weight:100;
+    }
+    .containerConteudo h1{
+      margin: 5% 0;
+      font-size: 3.5rem;
+      font-weight:100;
+      letter-spacing: 0.3em;
+      transform: scaleY(1.15);
+      font-style: oblique;
     }
     .containerConteudo span.animationSpan{
       animation: animationSpan 1s ease-in-out 1s both;
@@ -77,6 +85,8 @@ div.Pages{
       align-items: center;
       justify-content: center;
     }
+    /* .containerConteudo span.animationSpan::before{
+    } */
   /* page Up animation */
   div.visibilityPage{
     top:0vh;

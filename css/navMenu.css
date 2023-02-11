@@ -20,6 +20,7 @@
     font-weight: 200;
     display: flex;
     align-items: center;
+    cursor: pointer;
   }
   .NumbersOl li::after{
     position: absolute;

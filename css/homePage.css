@@ -2,18 +2,6 @@
 div.HomePage{
   background-image: url(../images/backgroundImages/DeLuxeBackground-01.jpg );
     }
-    .Pages div.containerConteudo{
-      display: flex;
-      flex-direction: column;
-    }
-    .Pages h1{
-      margin: 5% 0;
-      font-size: 3.5rem;
-      font-weight:100;
-      letter-spacing: 0.3em;
-      transform: scaleY(1.15);
-      font-style: oblique;
-    }
     .textAnimation {
       animation: textTitle  3.2s linear 1s both;
       opacity: 0;
