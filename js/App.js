@@ -1,4 +1,4 @@
-//array Pages
+//array Pages commit
   const allContainers = document.querySelectorAll('.Pages');
   const nodeArray = Array.from(allContainers); 
 //array Spans
@@ -16,44 +16,43 @@
 
         if( y > 0 && i < 4 ){     
           //adiciona e remove as classes posteriores
-          liArray[i+1].classList.add('activeSlide')
-          spanArray[i+1].classList.remove('animationSpan');         
+          liArray[i+1].classList.add('activeSlide')       
           nodeArray[i+1].classList.add('visibilityPage');
           nodeArray[i+1].classList.remove('animationPageUp');
 
-          /*esse timeOut serve para que o 'animateSpan' seja removido e adicionado novamente, para a animation
-          funcionar*/
-          setTimeout(() => {
-            spanArray[i+1].classList.add('animationSpan');  
-          },100); 
+          spanArray[i+1].classList.add('animationSpan');         
+          spanArray[i+1].classList.remove('spanPageUp');  
 
           //adiciona e remove as classes atuais
           liArray[i].classList.remove('activeSlide')
           nodeArray[i].classList.remove('visibilityPage');
           nodeArray[i].classList.add('animationPageUp');
 
+          spanArray[i].classList.remove('animationSpan');  
+          spanArray[i].classList.add('spanPageUp');  
+
           //remove as classes anteriores
-          nodeArray[i-1].classList.remove('animationPageUp');   
+          nodeArray[i-1].classList.remove('animationPageUp');  
+          spanArray[i-1].classList.remove('spanPageUp');   
         }
         else if (y < 0 && i <= 4){
           //adiciona e remove as classes anteriores
           liArray[i-1].classList.add('activeSlide')
-          spanArray[i-1].classList.remove('animationSpan');
           nodeArray[i-1].classList.add('visibilityPage');
           nodeArray[i-1].classList.remove('animationPageUp');
-
-          //timeOut para a animation do Span
-          setTimeout(() => {
-            spanArray[i-1].classList.add('animationSpan');
-          },100); 
+          spanArray[i-1].classList.add('animationSpan');
+          spanArray[i-1].classList.remove('spanPageUp');
 
           //adiciona e remove as classes atuais
           nodeArray[i].classList.remove('visibilityPage');
           nodeArray[i].classList.add('animationPageUp');
           liArray[i].classList.remove('activeSlide');
+          spanArray[i].classList.remove('animationSpan');
+          spanArray[i].classList.add('spanPageUp');
 
           //remove as classes posteriores
-          nodeArray[i+1].classList.remove('animationPageUp');        
+          nodeArray[i+1].classList.remove('animationPageUp');  
+          spanArray[i+1].classList.remove('spanPageUp');      
         }
     });
     //evento de Click no nav menu
@@ -72,10 +71,15 @@
       });
       liArray[i].classList.add('activeSlide');
 
-      //removendo o animationSpan de toda as Pages e adicionando na que foi clicada.
-      spanArray[i].classList.remove('animationSpan');
-      setTimeout(() => {
-        spanArray[i].classList.add('animationSpan');  
-      },100); 
+      //Mesma lógica do nodeArray
+      spanArray.forEach((item, index) => {
+        item.classList.add('spanPageUp');
+        item.classList.remove('animationSpan');
+      })
+      spanArray[i].classList.remove('spanPageUp');
+      spanArray[i].classList.add('animationSpan');
+      // setTimeout(() => {
+      //   spanArray[i].classList.add('animationSpan');  
+      // },100); 
     });
   }
