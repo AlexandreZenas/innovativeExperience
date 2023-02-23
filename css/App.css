@@ -114,7 +114,7 @@ div.Pages{
   }
   div.animationPageUp{
     /* z-index: 5; */
-    top: -1920px;   
+    top: -101vh;   
     transition: 1.5s; 
     z-index: 6;
   }
