@@ -1,4 +1,5 @@
-//array Pages commit
+//array Pages
+
   const allContainers = document.querySelectorAll('.Pages');
   const nodeArray = Array.from(allContainers); 
 //array Spans
@@ -82,4 +83,58 @@
       //   spanArray[i].classList.add('animationSpan');  
       // },100); 
     });
+
+    var touchY;
+    nodeArray[i].addEventListener('touchstart', (event) => {
+      event.preventDefault();
+      var y = event.changedTouches[0];
+      touchY = y.pageY;
+
+  }, false);
+  nodeArray[i].addEventListener('touchend', (event) => {
+    event.preventDefault();
+    var y = event.changedTouches[0];
+    directionY = y.pageY - touchY;
+    
+    if( directionY < 0 && i < 4 ){     
+      //adiciona e remove as classes posteriores
+      liArray[i+1].classList.add('activeSlide')       
+      nodeArray[i+1].classList.add('visibilityPage');
+      nodeArray[i+1].classList.remove('animationPageUp');
+
+      spanArray[i+1].classList.add('animationSpan');         
+      spanArray[i+1].classList.remove('spanPageUp');  
+
+      //adiciona e remove as classes atuais
+      liArray[i].classList.remove('activeSlide')
+      nodeArray[i].classList.remove('visibilityPage');
+      nodeArray[i].classList.add('animationPageUp');
+
+      spanArray[i].classList.remove('animationSpan');  
+      spanArray[i].classList.add('spanPageUp');  
+
+      //remove as classes anteriores
+      nodeArray[i-1].classList.remove('animationPageUp');  
+      spanArray[i-1].classList.remove('spanPageUp');   
+    }
+    else if (directionY >  0 && i <= 4){
+      //adiciona e remove as classes anteriores
+      liArray[i-1].classList.add('activeSlide')
+      nodeArray[i-1].classList.add('visibilityPage');
+      nodeArray[i-1].classList.remove('animationPageUp');
+      spanArray[i-1].classList.add('animationSpan');
+      spanArray[i-1].classList.remove('spanPageUp');
+
+      //adiciona e remove as classes atuais
+      nodeArray[i].classList.remove('visibilityPage');
+      nodeArray[i].classList.add('animationPageUp');
+      liArray[i].classList.remove('activeSlide');
+      spanArray[i].classList.remove('animationSpan');
+      spanArray[i].classList.add('spanPageUp');
+
+      //remove as classes posteriores
+      nodeArray[i+1].classList.remove('animationPageUp');  
+      spanArray[i+1].classList.remove('spanPageUp');      
+    }
+}, false);
   }
